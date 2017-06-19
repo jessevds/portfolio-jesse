@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default class TimelineEvent extends React.Component {
     /* constructor() {
@@ -14,18 +15,16 @@ export default class TimelineEvent extends React.Component {
 
             <div className="timeline-event">
 
+                <span className="project-block"> </span>
+
                 <div className="event-content">
-
-
-                <h3>Project name</h3>
-                <h4>company name</h4>
-
-                <hr></hr>
-
-
-                <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to <a>read more</a></p>
+                    <h3>{this.props.projectname}</h3>
+                    <h4>{this.props.company}</h4>
+                    <hr></hr>
+                <p>{this.props.description} <Link to="/project"> read more </Link></p>
 
                 </div>
+
             </div>
 
         );

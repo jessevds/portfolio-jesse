@@ -1,0 +1,247 @@
+/*--------------------------------------
+8. project-page
+---------------------------------------*/
+
+.project-page {
+
+  height: inherit;
+
+  .project-timeline {
+
+    position: fixed;
+    display: none;
+    width: 100%;
+    top:-0;
+    height:100vh;
+    z-index: -5;
+
+    > div{
+
+      @include grid-container;
+      max-width: 1024px;
+      margin: 0 auto;
+      height: 100%;
+      //padding:0 $spacing-large;
+
+    }
+
+    span.line{
+      //@include grid-column(1);
+      position: relative;
+      display: block;
+      left:-45px;
+      width:15px;
+      height:100%;
+      background-color: $neutral-dark;
+
+    }
+
+    @media #{$large-screen}{
+      display: block;
+    }
+  }
+
+  div.up{
+
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+
+    > nav {
+      @include grid-container;
+      max-width: 1024px;
+      margin: 0 auto;
+      display: block;
+      height: auto;
+      position: relative;
+      bottom: $spacing-small;
+
+      > a{
+        display: block;
+        @include size(70px);
+        background: $white;
+        //border: 1px solid $brown-dark;
+        border-radius:$base-radius;
+        padding: $spacing-small /2 ;
+
+        &:hover, &:active{
+          cursor: pointer;
+          background: $neutral-light;
+        }
+
+        span{
+          display: block;
+          @include size (100%);
+          background:url("assets/images/avatar-up-.png") no-repeat;
+          background-position:left center;
+          background-size:contain;
+        }
+      }
+    }
+
+    @media #{$medium-screen}{
+
+      > nav > a{
+
+        background: none;
+
+        &:hover, &:active{
+          background: rgba(255,255,255,0.5);
+        }
+      }
+
+
+    }
+
+  }
+
+  div.portfolio-heading{
+
+    //position:absolute;
+    width: 100%;
+    max-width: 1024px;
+    //border: 1px solid $brown;
+    margin: $spacing-small auto 0 ;
+    height: auto;
+    position: relative;
+    left: - $spacing-small;
+
+    h1, h4{
+      text-align: right;
+      margin-bottom: $spacing-small /4;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    h4{
+      font-size: 1em;
+      line-height: 1;
+      padding-bottom: $spacing-small / 2;
+    }
+
+    h1{
+      font-size: 2.1em;
+    }
+
+    @media #{$large-screen}{
+
+      left:$spacing;
+
+      h1, h4{
+
+      }
+
+    }
+  }
+
+
+
+  div.project-content {
+
+
+    @include grid-container;
+    max-width: 1024px;
+    margin: 0 auto $spacing;
+    background-color: $green;
+    border-radius: $base-radius;
+    color:$white;
+    padding:$spacing-large $spacing-small;
+
+
+    -webkit-clip-path: polygon(0 0, 100% 7%, 100% 93%, 0 100%);
+    clip-path: polygon(0 0, 100% 7%, 100% 93%, 0 100%);
+
+
+    h1{
+      text-align: center;
+      color:inherit;
+      margin-bottom: $spacing-small;
+
+      &:hover{
+        cursor:pointer;
+        color:yellow;
+      }
+    }
+
+    h2{
+      text-align: center;
+      color:inherit;
+      margin-top: $spacing-small;
+    }
+
+    h3{
+      color:inherit;
+    }
+
+    p{
+      color: inherit;
+    }
+
+    hr{
+      border-color:$white;
+      border-style: solid;
+      margin:$spacing 0;
+    }
+
+    @media #{$medium-screen} {
+
+    margin: 0 auto $spacing-large;
+    padding: 120px $spacing;
+
+      -webkit-clip-path: polygon(0 0, 100% 13%, 100% 87%, 0 100%);
+      clip-path: polygon(0 0, 100% 13%, 100% 87%, 0 100%);
+
+    div.layout-article{
+      @include grid-column(10);
+      @include grid-shift(1)
+    }
+  }
+
+    @media #{$large-screen} {
+
+      div.layout-article{
+        @include grid-column(8);
+        @include grid-shift(2)
+      }
+    }
+  }
+
+  div.page-navigation{
+
+    @include grid-container;
+    max-width: 1024px;
+    margin: 0 auto $spacing-large;
+    padding:0 $spacing-small;
+
+    nav{
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      align-items: center;
+
+      span{
+        display: block;
+        //margin-left: 20px;
+        @include size(10px);
+        background-color:$neutral;
+        border-radius: 50%;
+
+        &.active{
+          background-color: $neutral-dark;
+        }
+      }
+
+      a.button{
+
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $blue;
+
+      }
+    }
+
+  }
+}
