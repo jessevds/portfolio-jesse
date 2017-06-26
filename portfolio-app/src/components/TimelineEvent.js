@@ -21,7 +21,7 @@ export default class TimelineEvent extends React.Component {
                     <h3>{this.props.projectname}</h3>
                     <h4>{this.props.company}</h4>
                     <hr></hr>
-                <p>{this.props.description} <Link to="/project"> read more </Link></p>
+                <p>{this.props.description} <Link to={this.props.link}> read more </Link></p>
 
                 </div>
 

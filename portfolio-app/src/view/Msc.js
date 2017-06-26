@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import keyhub from './../assets/images/grafisch/keyhub.jpg';
+import adappt from './../assets/images/Studie/add-appt.png';
+import highway from './../assets/images/Studie/SmartHighway.jpg';
+import traffic from './../assets/images/Studie/trafficgame.jpg';
 
 export default class ProjectPage extends React.Component {
-    /* constructor() {
-     super();
-     } */
+
+    //var ScrollPosition = 400;
 
     componentDidMount(){
 
@@ -35,43 +36,42 @@ export default class ProjectPage extends React.Component {
 
 
                 <div className="portfolio-heading">
-                    <h1>portfolio</h1>
-                    <h4>jesse van der scheer</h4>
+                    <h1>Portfolio</h1>
+                    <h4>Jesse van der Scheer</h4>
                 </div>
 
-                <div className="project-content">
+                <div className="project-content education">
 
 
                     <div className="layout-article">
 
                     <div>
-                        <h1>project title</h1>
-                        <h2>company name 2014/15</h2>
+                        <h1>MSc. Industrial Design Engineering</h1>
+                        <h2>University of Twente <span>2011-2013</span></h2>
 
                         <hr></hr>
                     </div>
 
-                    <h3>Description</h3>
-                    <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
+                    <p>In my master I specialised in User Centered Design of interactive products. I took courses on ea. artificial intelligence, human media interaction and scenario based design. I was esspecialy drawn to designing for education. Hence I also studied learning with multimedia, games and simulations.</p>
 
-                        From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
+                        <h2>Public transport assistant</h2>
 
+                        <img src={adappt} als="OV AdAppt - public transport assistant"/>
+                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
+                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
 
-                        <h3>Description</h3>
+                        <h2>Educational traffic game</h2>
+                        <img src={traffic} als="Educational traffic game"/>
                         <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
                             From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
 
 
-                        <h3>Description</h3>
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
+                        <h2>Energy efficient road sign</h2>
 
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
+                        <img src={highway} als="Smart Highway sign"/>
 
-
-
-                        <h3>Description</h3>
                         <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
                             From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
@@ -84,18 +84,18 @@ export default class ProjectPage extends React.Component {
                 <div className="page-navigation">
 
                     <nav>
-                        <Link className="button previous" to="/project">previous</Link>
+                        <Link className="button previous" to="/bsc">previous</Link>
                         <div className="project-dots">
-                            <span></span>
-                            <span></span>
                             <span></span>
                             <span className="active"></span>
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <Link className="button next" to="/project">next</Link>
+                        <Link className="button next" to="/parnassys">next</Link>
                     </nav>
 
                 </div>

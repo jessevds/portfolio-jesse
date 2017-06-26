@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import keyhub from './../assets/images/grafisch/keyhub.jpg';
+import parTransition from './../assets/images/Parnassys/transition.gif';
+import kennisportaal from './../assets/images/Parnassys/showcase-kennisportaal.png';
 
-export default class ProjectPage extends React.Component {
+export default class Parnassys extends React.Component {
     /* constructor() {
      super();
      } */
@@ -45,37 +46,31 @@ export default class ProjectPage extends React.Component {
                     <div className="layout-article">
 
                     <div>
-                        <h1>project title</h1>
-                        <h2>company name 2014/15</h2>
-
+                        <h1>Parnassys</h1>
+                        <h2>Topicus Education 2014/16</h2>
                         <hr></hr>
                     </div>
 
-                    <h3>Description</h3>
                     <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
                         From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
 
 
 
-                        <h3>Description</h3>
+                        <h2>ParnasSys redesign</h2>
+
+                        <img src={parTransition} alt="redesign transition" />
                         <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
                             From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
 
 
-                        <h3>Description</h3>
+                        <h2>Customer service portal</h2>
+
+                        <img src={kennisportaal} alt="kennisportaal" />
                         <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
                             From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
-
-
-
-                        <h3>Description</h3>
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
-
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
-
 
                     </div>
                 </div>

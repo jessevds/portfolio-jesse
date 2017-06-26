@@ -1,8 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import keyhub from './../assets/images/grafisch/keyhub.jpg';
 
-export default class ProjectPage extends React.Component {
+export default class Wiser extends React.Component {
     /* constructor() {
      super();
      } */

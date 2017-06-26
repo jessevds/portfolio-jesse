@@ -1,6 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import keyhub from './../assets/images/grafisch/keyhub.jpg';
+import networkworld from './../assets/images/museon/networkworld.jpg';
+import networkmap from './../assets/images/museon/networkmap.jpg';
+import networkconcept1 from './../assets/images/museon/conceptpage-1.jpg';
+import networkconcept2 from './../assets/images/museon/conceptpage-2.jpg';
+import networkconcept3 from './../assets/images/museon/conceptpage-3.jpg';
 
 export default class ProjectPage extends React.Component {
     /* constructor() {
@@ -45,36 +49,44 @@ export default class ProjectPage extends React.Component {
                     <div className="layout-article">
 
                     <div>
-                        <h1>project title</h1>
-                        <h2>company name 2014/15</h2>
+                        <h1>Network World</h1>
+                        <h2>Museon 2013</h2>
 
                         <hr></hr>
                     </div>
 
-                    <h3>Description</h3>
+                        <img src={networkworld} alt="network world" />
+
                     <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
                         From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
 
 
 
-                        <h3>Description</h3>
+                        <h2>Concept validation</h2>
+
+                        <div>
+                            <img src={networkconcept1} alt="concept sheet 1" /></div>
+                        <div>
+                            <img className="layout-two" src={networkconcept2} alt="concept sheet 1" />
+                            <img className="layout-two right" src={networkconcept3} alt="concept sheet 1" />
+                        </div>
+
                         <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
                             From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
 
 
-                        <h3>Description</h3>
+                        <h2>wayfinding</h2>
                         <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
 
                             From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
 
+                        <div>
+                            <img src={networkmap} alt="network world" />
+                        </div>
 
 
-                        <h3>Description</h3>
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
-
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
 
 
                     </div>
@@ -84,9 +96,8 @@ export default class ProjectPage extends React.Component {
                 <div className="page-navigation">
 
                     <nav>
-                        <Link className="button previous" to="/project">previous</Link>
+                        <Link className="button previous" to="/msc">previous</Link>
                         <div className="project-dots">
-                            <span></span>
                             <span></span>
                             <span></span>
                             <span className="active"></span>
@@ -94,8 +105,9 @@ export default class ProjectPage extends React.Component {
                             <span></span>
                             <span></span>
                             <span></span>
+                            <span></span>
                         </div>
-                        <Link className="button next" to="/project">next</Link>
+                        <Link className="button next" to="/parnassys">next</Link>
                     </nav>
 
                 </div>
