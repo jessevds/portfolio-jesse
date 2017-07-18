@@ -4,6 +4,8 @@
 
 
 import React from 'react';
+import CV from './../assets/CV-jesse-nederlands.pdf';
+import Mailto from 'react-mailto'
 
 export default class Footer extends React.Component {
     /*constructor() {
@@ -18,16 +20,15 @@ export default class Footer extends React.Component {
 
                     <div className="my-info">
 
-                        <h1>That's me</h1>
-                        <figure></figure>
+                        <h1>So that's me</h1>
 
                         <p>also check out my:</p>
                         <ul>
                             <li className="link-left">
-                                <a>CV</a>
+                                <a href={CV}>CV</a>
                             </li>
                             <li>
-                                <a>in</a>
+                                <a className="linked-in" href="https://www.linkedin.com/in/jesse-van-der-scheer-10bb57a/" target="_blank"><span></span></a>
                             </li>
                         </ul>
 
@@ -36,13 +37,10 @@ export default class Footer extends React.Component {
                     <div className="contact">
 
                         <h1>who are you?</h1>
-                        <p>contact me when you have some awesome ferrytale to tell</p>
+                        <p>Contact and i'll get back to you as soon as possible</p>
 
                         <form>
-                            <input type="text" placeholder="your name"/>
-                            <input type="text" placeholder="your emailadres"/>
-                            <textarea placeholder="your message"></textarea>
-                            <button className="primary">contact me</button>
+                            <Mailto className="button primary" email="jesse.vanderscheer@gmail.com">Email me</Mailto>
                         </form>
 
 

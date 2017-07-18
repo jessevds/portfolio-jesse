@@ -89,14 +89,17 @@ a {
       margin: 60px auto;
       padding: 0 20px; } }
 
-button {
+button, a.button {
+  display: block;
+  text-decoration: none;
   padding: 10px 15px;
   border-radius: 2px;
   font-size: 1em;
   font-family: "Muli", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px; }
-  button.primary {
+  letter-spacing: 2px;
+  text-align: center; }
+  button.primary, a.button.primary {
     color: #ffffff;
     border-color: #83BD6A;
     background-color: #83BD6A; }
@@ -104,26 +107,28 @@ button {
 /*--------------------------------------
 4. header
 ---------------------------------------*/
-div.header-index {
+header .header-index {
   background-color: #53A6A9;
+  height: 160px;
   padding: 15px; }
-  div.header-index div.road {
+  header .header-index div.road {
     display: none; }
-  div.header-index div.header-background {
-    margin: 1em auto;
-    height: 15em;
-    width: 15em;
+  header .header-index div.header-background {
+    margin: 0 auto;
+    height: 12em;
+    width: 12em;
     background: url("./assets/images/avatar-head.png") no-repeat;
     background-size: contain;
     background-position: center; }
-    div.header-index div.header-background a {
+    header .header-index div.header-background a {
       display: none; }
   @media (min-width: 768px) {
-    div.header-index {
+    header .header-index {
       background-color: transparent;
       padding: 30px 30px 0;
-      position: relative; }
-      div.header-index div.road {
+      position: relative;
+      height: 300px; }
+      header .header-index div.road {
         display: block;
         position: absolute;
         top: 217px;
@@ -132,7 +137,7 @@ div.header-index {
         height: 1.4em;
         width: 35%;
         z-index: -2; }
-      div.header-index div.header-background {
+      header .header-index div.header-background {
         margin: 0 auto;
         background: url("./assets/images/avatar-scene.png") no-repeat;
         background-size: contain;
@@ -140,11 +145,11 @@ div.header-index {
         width: 100%;
         max-width: 735px;
         height: 300px; }
-        div.header-index div.header-background::after {
+        header .header-index div.header-background::after {
           clear: both;
           content: "";
           display: block; }
-        div.header-index div.header-background a {
+        header .header-index div.header-background a {
           display: inline-block;
           padding: 10px 15px;
           border-radius: 2px;
@@ -152,59 +157,85 @@ div.header-index {
           top: 6em;
           font-size: 1.2em;
           text-transform: uppercase; }
-          div.header-index div.header-background a.experience {
+          header .header-index div.header-background a.experience {
             color: #353635; }
-            div.header-index div.header-background a.experience:hover, div.header-index div.header-background a.experience:active {
+            header .header-index div.header-background a.experience:hover, header .header-index div.header-background a.experience:active, header .header-index div.header-background a.experience.active {
               background-color: #353635; }
-          div.header-index div.header-background a.skills {
+          header .header-index div.header-background a.skills {
             color: #83BD6A;
             left: 2em; }
-            div.header-index div.header-background a.skills:hover, div.header-index div.header-background a.skills:active {
+            header .header-index div.header-background a.skills:hover, header .header-index div.header-background a.skills:active, header .header-index div.header-background a.skills.active {
               background-color: #83BD6A; }
-          div.header-index div.header-background a.knowledge {
+          header .header-index div.header-background a.knowledge {
             color: #53A6A9;
             left: 14em; }
-            div.header-index div.header-background a.knowledge:hover, div.header-index div.header-background a.knowledge:active {
+            header .header-index div.header-background a.knowledge:hover, header .header-index div.header-background a.knowledge:active, header .header-index div.header-background a.knowledge.active {
               background-color: #53A6A9; }
-          div.header-index div.header-background a.interests {
+          header .header-index div.header-background a.interests {
             color: #A27570;
             left: 15em; }
-            div.header-index div.header-background a.interests:hover, div.header-index div.header-background a.interests:active {
+            header .header-index div.header-background a.interests:hover, header .header-index div.header-background a.interests:active, header .header-index div.header-background a.interests.active {
               background-color: #A27570; }
-          div.header-index div.header-background a:hover, div.header-index div.header-background a:active {
+          header .header-index div.header-background a.headlink {
+            display: none; }
+          header .header-index div.header-background a:hover, header .header-index div.header-background a:active, header .header-index div.header-background a.active {
             cursor: pointer;
             color: #ffffff; } }
 
-div#header-title {
+header div.header-title {
   background-color: #353635;
   padding: 15px 0;
   text-align: center;
   z-index: 10;
   transition: top 0.2s ease-in-out; }
-  div#header-title h1 {
+  header div.header-title nav {
+    display: none; }
+  header div.header-title h1 {
     color: #ffffff;
     text-align: center;
     margin: 0 7.5px; }
-  div#header-title h4 {
-    margin: 0; }
-  div#header-title.sticky-on {
+  header div.header-title h2 {
+    margin: 0;
+    font-size: 1.2em; }
+  header div.header-title.nav-up {
+    top: -60px; }
+
+@media (min-width: 768px) {
+  header.sticky-on {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     border-radius: 0;
-    margin: 0; }
-  div#header-title.nav-up {
-    top: -60px; }
-
-.App-intro {
-  font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+    margin: 0;
+    z-index: 10; }
+    header.sticky-on div.header-index {
+      background-color: #ffffff;
+      border-bottom: 2px solid #353635;
+      box-shadow: 2px 0 6px 0 #353635;
+      height: 50px; }
+      header.sticky-on div.header-index div.road {
+        display: none; }
+      header.sticky-on div.header-index div.header-background {
+        background: none;
+        height: auto; }
+        header.sticky-on div.header-index div.header-background a {
+          top: -0.5em; }
+          header.sticky-on div.header-index div.header-background a.headlink {
+            display: inline-block;
+            height: 3em;
+            width: 3em;
+            background: url("./assets/images/avatar-head.png") no-repeat;
+            background-size: contain;
+            background-position: center;
+            position: absolute;
+            top: 0.25em;
+            left: 47.3%; }
+            header.sticky-on div.header-index div.header-background a.headlink:hover, header.sticky-on div.header-index div.header-background a.headlink:active {
+              cursor: pointer;
+              background-color: #e9eae9; }
+    header.sticky-on div.header-title {
+      display: none; } }
 
 /*--------------------------------------
 5. about
@@ -215,15 +246,20 @@ div#header-title {
   margin-left: 20px;
   text-align: center; }
 
-.content.about a.test-link {
+.content.about div.photo {
   width: calc(100% - 40px);
   float: left;
   margin-left: 20px;
-  padding: 30px;
-  background-color: #83BD6A; }
-  .content.about a.test-link:hover {
-    background-color: #529035;
-    cursor: pointer; }
+  height: auto; }
+  .content.about div.photo figure {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: url("./assets/images/pasfoto.png") no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px auto; }
 
 .content.about div.location {
   width: calc(100% - 40px);
@@ -249,7 +285,14 @@ div#header-title {
     width: calc(66.66667% - 33.33333px);
     float: left;
     margin-left: 20px;
-    left: calc(16.66667% - 23.33333px + 20px);
+    left: calc(8.33333% - 21.66667px + 20px);
+    position: relative;
+    text-align: left; }
+  .content.about div.photo {
+    width: calc(16.66667% - 23.33333px);
+    float: left;
+    margin-left: 20px;
+    left: calc(8.33333% - 21.66667px + 20px);
     position: relative; }
   .content.about p.quote {
     font-size: 1.2rem; } }
@@ -289,8 +332,7 @@ div#header-title {
   display: none; }
 
 .timeline div.timeline-event p {
-  margin-top: 0;
-  height: 60px; }
+  margin-top: 0; }
 
 @media (min-width: 768px) {
   .timeline div.timeline-event {
@@ -303,6 +345,8 @@ div#header-title {
       margin: 0 0 15px;
       border-color: #83BD6A;
       border-style: solid; }
+    .timeline div.timeline-event p {
+      height: 60px; }
     .timeline div.timeline-event span.project-block {
       display: block;
       background-color: #83BD6A;
@@ -417,15 +461,6 @@ footer {
       text-align: center; }
     footer .content div.my-info {
       color: inherit; }
-      footer .content div.my-info figure {
-        height: 10em;
-        width: 10em;
-        border-radius: 50%;
-        border: 2px solid #ffffff;
-        background-color: #dddedc;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 15px auto; }
       footer .content div.my-info p {
         color: inherit; }
       footer .content div.my-info ul {
@@ -448,7 +483,23 @@ footer {
             height: 30px;
             width: 30px;
             border-radius: 2px;
-            border: 2px solid #ffffff; }
+            border: 2px solid #ffffff;
+            text-decoration: none; }
+            footer .content div.my-info ul > li > a.linked-in span {
+              display: block;
+              height: 50%;
+              width: 50%;
+              margin: 7px;
+              background: url("./assets/images/linkedin-white.png") no-repeat;
+              background-position: center;
+              background-size: contain; }
+            footer .content div.my-info ul > li > a:hover, footer .content div.my-info ul > li > a:active {
+              background: #ffffff;
+              color: #353635;
+              text-decoration: none; }
+              footer .content div.my-info ul > li > a:hover span, footer .content div.my-info ul > li > a:active span {
+                background: url("./assets/images/linkedin-dark.png") no-repeat;
+                background-size: contain; }
     footer .content div.contact {
       color: inherit; }
       footer .content div.contact form input, footer .content div.contact form textarea {
@@ -468,7 +519,7 @@ footer {
         max-width: 100%;
         margin-bottom: 30px;
         overflow: hidden; }
-      footer .content div.contact form button.primary {
+      footer .content div.contact form .button.primary {
         display: block;
         width: 100%; }
     @media (min-width: 480px) {
@@ -488,9 +539,9 @@ footer {
         margin-left: 20px;
         left: calc(16.66667% - 23.33333px + 20px);
         position: relative; }
-        footer .content div.contact form button.primary, footer .content div.my-info form button.primary {
-          width: auto;
-          float: right; } }
+        footer .content div.contact form .button.primary, footer .content div.my-info form .button.primary {
+          width: 100px;
+          margin: 0 auto; } }
     @media (min-width: 1024px) {
       footer .content div.my-info {
         width: calc(33.33333% - 26.66667px);
@@ -504,6 +555,8 @@ footer {
           height: 40px;
           width: 40px;
           line-height: 3em; }
+          footer .content div.my-info ul > li > a.linked-in span {
+            margin: 10px; }
       footer .content div.contact {
         width: calc(66.66667% - 33.33333px);
         float: left;

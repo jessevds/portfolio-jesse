@@ -4,6 +4,7 @@ import breeze from './../assets/images/Studie/Breeze.jpg';
 import cube from './../assets/images/Studie/cube.png';
 import fogar from './../assets/images/Studie/fogar.jpg';
 
+
 export default class ProjectPage extends React.Component {
     /* constructor() {
      super();
@@ -18,10 +19,7 @@ export default class ProjectPage extends React.Component {
         return (
 
             <div className="project-page">
-
-
                 <div className="project-timeline">
-
                         <div>
                             <span className="line"></span>
                         </div>
@@ -34,7 +32,6 @@ export default class ProjectPage extends React.Component {
                         </Link>
                     </nav>
                 </div>
-
 
                 <div className="portfolio-heading">
                     <h1>portfolio</h1>

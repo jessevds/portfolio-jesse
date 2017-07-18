@@ -3,6 +3,11 @@
  */
 
 import React from 'react';
+var Scroll    = require('react-scroll');
+var scrollSpy  = Scroll.scrollSpy;
+var Link       = Scroll.Link;
+var scroll     = Scroll.animateScroll;
+var Events     = Scroll.Events;
 
 export default class HeaderTitle extends React.Component {
 
@@ -13,6 +18,7 @@ export default class HeaderTitle extends React.Component {
         this.state = {
             headerSticky:false
         };
+
     }
 
     componentDidMount() {
@@ -21,6 +27,9 @@ export default class HeaderTitle extends React.Component {
       //const initialHeight = document.getElementById('header-title').getBoundingClientRect().top;
         var self = this;
         window.addEventListener('scroll', function(){self.handleScroll(initialHeight)});
+
+
+        scrollSpy.update();
     }
 
     componentWillUnmount(){
@@ -44,6 +53,10 @@ export default class HeaderTitle extends React.Component {
        // console.log(this.state.headerSticky + "scroll");
     };
 
+    scrollToTop() {
+        scroll.scrollToTop();
+    }
+
 
     render(){
 
@@ -51,17 +64,34 @@ export default class HeaderTitle extends React.Component {
 
         return (
 
-            <div id="header-title" className={this.state.headerSticky ? "sticky-on" : "sticky-off"}
-                data-sticky
-                data-sticky-enter={enter}
-                data-sticky-exit={exit}
+            <header id="header" className={this.state.headerSticky ? "sticky-on" : "sticky-off"}
+                 data-sticky
+                 data-sticky-enter={enter}
+                 data-sticky-exit={exit}
             >
-                <h1>Jesse van der Scheer</h1>
-                <h4>product & interaction designer - limited edition</h4>
+                <div className="header-index">
 
+                    <div className="road"></div>
+                    <div className="header-background">
+                        <nav>
+                            <Link activeClass="active" className="experience" to="experience-element" spy={true}
+                                  smooth={true} offset={-100} duration={500}>experience</Link>
+                            <Link activeClass="active" className="skills" to="skills-element" spy={true} smooth={true}
+                                  duration={500}>skills</Link>
+                            <a onClick={() => scroll.scrollToTop()} className="headlink"></a>
+                            <Link activeClass="active" className="knowledge" to="knowledge-element" spy={true}
+                                  smooth={true} duration={500}>knowledge</Link>
+                            <Link activeClass="active" className="interests" to="interests-element" spy={true}
+                                  smooth={true} duration={500}>interests</Link>
+                        </nav>
+                    </div>
 
-
-            </div>
+                </div>
+                <div className="header-title">
+                    <h1>Jesse van der Scheer</h1>
+                    <h2>product & interaction designer</h2>
+                </div>
+            </header>
 
         );
     }

@@ -57,7 +57,7 @@ export default class Graphical extends React.Component {
 
 
 
-                        <p>Although I do not consider it my speciality, I do like a graphic design project every once and a while. I know about branding and print design and enjoy figuering out what a client really wants. Here are a few examples of my work.</p>
+                        <p>I like to do a graphic design side project every once and a while. I know about branding, print design and enjoy working together with a client to figure out what a the identity of a product should be.</p>
 
                         <h2>Keyhub logo</h2>
 
@@ -65,20 +65,14 @@ export default class Graphical extends React.Component {
                         <p> <a href="https://www.topicus-keyhub.com/">Topicus Keyhub,</a> an application for in-company access and password management. The letters Y and H are shaped as keys and locked together. This element can also be used as a visual detail. A single key is used as an App icon for both browser plugins and mobile apps which provides users credentials for authentication.</p>
 
                         <h2>Pastries frontpage graphic</h2>
-
                         <img src={pastries} alt="quality pastries marketing cover"/>
                         <p>Someone at <a target="_blank" href="http://www.quality-pastries.nl/">Quality Pastries</a> asked me to make a frontpage visual for their marketing plan. Their plan was to increase pastries revenue in the US and Western Europe and hence increase their share of the global market. The visual combines this goal with the company logo.</p>
 
-
-
                         <h2>Branding Bouquetterie Amarant</h2>
-
                         <img src={amarant} alt="quality pastries marketing cover"/>
                         <p>This composition shows the branding for Bouquetterie Amarant, my sister's small quality flower shop. Besides the logo I developed all print design: businesscards, order forms, stickers and coupons.</p>
 
-
                         <h2>Cycling Poster</h2>
-
                         <img src={hemelvaart} alt="quality pastries marketing cover"/>
                         <p>This poster is another personal project. It refers to the Dutch tradition of cycling which is reflected in the imagery, typography and language.</p>
 

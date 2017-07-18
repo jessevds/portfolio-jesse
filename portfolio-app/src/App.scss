@@ -1,7 +1,6 @@
 @import "../library/bourbon/bourbon";
 @import "../library/neat/neat";
 
-
 /* --------------------------------------------
 portfolio App styling Index
 ------------------------------------------------
@@ -17,7 +16,6 @@ portfolio App styling Index
 
 --------------------------------------------*/
 
-
 /*--------------------------------------
 1. variables
 ---------------------------------------*/
@@ -25,115 +23,108 @@ portfolio App styling Index
 //grid & breakpoints
 
 $neat-grid: (
-  columns: 12,
-  gutter: 20px,
-  );
+        columns: 12,
+        gutter: 20px,
+);
 
-$tablet-screen:only screen and (min-width : 480px);
-$medium-screen:only screen and (min-width : 768px);
-$large-screen:only screen and (min-width: 1024px);
-
+$tablet-screen: only screen and (min-width : 480px);
+$medium-screen: only screen and (min-width : 768px);
+$large-screen: only screen and (min-width: 1024px);
 
 //colors
 
-$green:#83BD6A;
-$green-dark:#529035;
-$blue:#53A6A9;
-$blue-dark:#3B717F;
-$brown:#A27570;
-$brown-dark:#82534E;
+$green: #83BD6A;
+$green-dark: #529035;
+$blue: #53A6A9;
+$blue-dark: #3B717F;
+$brown: #A27570;
+$brown-dark: #82534E;
 
-$white:#ffffff;
-$neutral:#B6B9B4;
+$white: #ffffff;
+$neutral: #B6B9B4;
 $neutral-light: lighten($neutral, 15%);
 $neutral-lighter: lighten($neutral, 20%);
-$neutral-dark:#353635;
-
+$neutral-dark: #353635;
 
 //base settings
 
-$base-radius:2px;
-$base-font-size:14px;
-$base-line-height:1.5;
+$base-radius: 2px;
+$base-font-size: 14px;
+$base-line-height: 1.5;
 $base-spacing: 2px;
 
-$spacing:30px;
-$spacing-small:$spacing / 2;
-$spacing-large:$spacing * 2;
-
-
+$spacing: 30px;
+$spacing-small: $spacing / 2;
+$spacing-large: $spacing * 2;
 
 /*--------------------------------------
 2. typography
 ---------------------------------------*/
 
-$font-base:'Crimson Text', sans-serif;
-$font-heading:'Muli', sans-serif;
+$font-base: 'Crimson Text', sans-serif;
+$font-heading: 'Muli', sans-serif;
 
-html{
-  font-size:$base-font-size;
-  line-height:$base-line-height;
-  color:$neutral-dark;
+html {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $neutral-dark;
   font-family: $font-base;
 
 }
 
-
-h1{
-  font-size:2rem;
-  font-weight:600;
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
   margin-bottom: $spacing;
-  color:$neutral-dark;
+  color: $neutral-dark;
   font-family: $font-heading;
-  text-transform:uppercase;
-  letter-spacing:$base-spacing;
+  text-transform: uppercase;
+  letter-spacing: $base-spacing;
 }
 
-h2{
-  font-size:1.5rem;
+h2 {
+  font-size: 1.5rem;
   font-weight: 200;
-  color:$neutral;
+  color: $neutral;
   font-family: $font-heading;
-  text-transform:uppercase;
-  letter-spacing:$base-spacing;
+  text-transform: uppercase;
+  letter-spacing: $base-spacing;
 }
 
-h3{
-  font-size:1.2rem;
-  color:$neutral-dark;
+h3 {
+  font-size: 1.2rem;
+  color: $neutral-dark;
   margin-bottom: $spacing-small;
   font-weight: 600;
   font-family: $font-heading;
-  letter-spacing:$base-spacing / 2;
+  letter-spacing: $base-spacing / 2;
 }
 
-h4{
-  font-size:1.1rem;
+h4 {
+  font-size: 1.1rem;
   font-weight: 200;
-  color:$neutral;
+  color: $neutral;
   font-family: $font-heading;
-  letter-spacing:$base-spacing / 2;
+  letter-spacing: $base-spacing / 2;
 }
 
-
-p{
-  font-size:1.1rem;
+p {
+  font-size: 1.1rem;
   margin-top: 0;
-  line-height:$base-line-height;
-  color:$neutral-dark;
+  line-height: $base-line-height;
+  color: $neutral-dark;
   font-family: $font-base;
 }
 
-p.quote{
+p.quote {
   font-style: italic;
-  //color:$neutral;
 }
 
-a{
-  color:$blue;
+a {
+  color: $blue;
 
-  &:hover, &:active, &:visited{
-    color:$blue-dark;
+  &:hover, &:active, &:visited {
+    color: $blue-dark;
   }
 }
 
@@ -141,35 +132,38 @@ a{
 3. layout
 ---------------------------------------*/
 
-.content{
+.content {
   @include grid-container;
   max-width: 1024px;
   margin: $spacing auto;
-  padding:0 $spacing-small;
+  padding: 0 $spacing-small;
 
-  h1{
+  h1 {
     text-align: center;
   }
 
   @media #{$medium-screen} {
 
-    margin:$spacing-large auto;
-    padding:0 20px;
+    margin: $spacing-large auto;
+    padding: 0 20px;
   }
 }
 
-button{
+button, a.button {
 
-  padding:10px $spacing-small;
+  display:block;
+  text-decoration: none;
+  padding: 10px $spacing-small;
   border-radius: $base-radius;
   font-size: 1em;
   font-family: $font-heading;
-  text-transform:uppercase;
+  text-transform: uppercase;
   letter-spacing: 2px;
+  text-align: center;
 
-  &.primary{
-    color:$white;
-    border-color:$green;
+  &.primary {
+    color: $white;
+    border-color: $green;
     background-color: $green;
   }
 }
@@ -178,202 +172,248 @@ button{
 4. header
 ---------------------------------------*/
 
-div.header-index {
-  background-color:$blue;
-  //height: 300px;
-  padding: $spacing-small;
+header {
 
-  div.road{
-    display: none;
-  }
+  .header-index {
+    background-color: $blue;
+    height: 160px;
+    padding: $spacing-small;
 
-
-  div.header-background{
-    margin: 1em auto;
-    height:15em;
-    width:15em;
-    background:url("./assets/images/avatar-head.png") no-repeat;
-    background-size:contain;
-    background-position: center;
-
-    a{
+    div.road {
       display: none;
     }
-  }
 
-  @media #{$medium-screen}{
-    background-color:transparent;
-    padding:$spacing $spacing 0;
-    position: relative;
-    //bottom:-5px;
+    div.header-background {
+      margin: 0 auto;
+      height: 12em;
+      width: 12em;
+      background: url("./assets/images/avatar-head.png") no-repeat;
+      background-size: contain;
+      background-position: center;
 
-
-    div.road{
-      display: block;
-      position: absolute;
-      top:217px;
-      left:0;
-      background-color: $neutral-dark;
-      height: 1.4em;
-      width: 35%;
-      z-index: -2;
-
+      a {
+        display: none;
+      }
     }
 
-    div.header-background{
-      @include grid-container;
-      //border:1px solid $green;
-      margin: 0 auto;
-      background:url("./assets/images/avatar-scene.png") no-repeat;
-      background-size:contain;
-      background-position: center;
-      width:100%;
-      max-width: 735px;
+    @media #{$medium-screen}{
+      background-color: transparent;
+      padding: $spacing $spacing 0;
+      position: relative;
       height: 300px;
 
+      div.road {
+        display: block;
+        position: absolute;
+        top: 217px;
+        left: 0;
+        background-color: $neutral-dark;
+        height: 1.4em;
+        width: 35%;
+        z-index: -2;
+      }
 
-      a{
-        display: inline-block;
-        padding:10px $spacing-small;
-        border-radius: $base-radius;
-        position: relative;
-        top:6em;
-        font-size:1.2em;
-        text-transform: uppercase;
+      div.header-background {
+        @include grid-container;
+        margin: 0 auto;
+        background: url("./assets/images/avatar-scene.png") no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        max-width: 735px;
+        height: 300px;
 
+        a {
+          display: inline-block;
+          padding: 10px $spacing-small;
+          border-radius: $base-radius;
+          position: relative;
+          top: 6em;
+          font-size: 1.2em;
+          text-transform: uppercase;
 
-        &.experience{
-          color: $neutral-dark;
-         // top:7.5em;
-          //left: 25px;
+          &.experience {
+            color: $neutral-dark;
 
-          &:hover, &:active{
-            background-color:$neutral-dark;
+            &:hover, &:active, &.active {
+              background-color: $neutral-dark;
+            }
           }
-        }
 
-        &.skills{
-          color: $green;
-          //top:4em;
-          left: 2em;
+          &.skills {
+            color: $green;
+            //top:4em;
+            left: 2em;
 
-          &:hover, &:active{
-            background-color: $green;
+            &:hover, &:active, &.active {
+              background-color: $green;
+            }
           }
-        }
 
-        &.knowledge{
-          color: $blue;
-          //top:5.5em;
-          left: 14em;
+          &.knowledge {
+            color: $blue;
+            //top:5.5em;
+            left: 14em;
 
-          &:hover, &:active{
-            background-color:$blue;
+            &:hover, &:active, &.active {
+              background-color: $blue;
+            }
           }
-        }
 
-        &.interests{
-          color: $brown;
-          //top:8em;
-          left: 15em;
+          &.interests {
+            color: $brown;
+            left: 15em;
 
-          &:hover, &:active{
-            background-color:$brown;
+            &:hover, &:active, &.active {
+              background-color: $brown;
+            }
           }
-        }
 
-        &:hover, &:active{
-          cursor: pointer;
-          color: $white;
+          &.headlink {
+            display: none;
+
+          }
+
+          &:hover, &:active, &.active {
+            cursor: pointer;
+            color: $white;
+          }
         }
       }
     }
   }
-}
 
-div#header-title{
-  background-color: $neutral-dark;
-  padding:$spacing-small 0;
-  text-align: center;
-  z-index: 10;
-  transition: top 0.2s ease-in-out;
-
-  h1{
-    color:$white;
+  div.header-title {
+    background-color: $neutral-dark;
+    padding: $spacing-small 0;
     text-align: center;
-    margin:0 $spacing-small/2;
+    z-index: 10;
+    transition: top 0.2s ease-in-out;
+
+    nav {
+      display: none;
+    }
+
+    h1 {
+      color: $white;
+      text-align: center;
+      margin: 0 $spacing-small/2;
+    }
+
+    h2 {
+      margin: 0;
+      font-size:1.2em;
+    }
+
+    &.nav-up {
+      top: -60px;
+    }
   }
 
-  h4{
-    margin: 0;
+  &.sticky-on {
+
+    @media #{$medium-screen}{
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-radius: 0;
+      margin: 0;
+      z-index: 10;
+
+      div.header-index {
+        background-color: $white;
+        border-bottom: 2px solid $neutral-dark;
+        box-shadow: 2px 0 6px  0 $neutral-dark;
+        height: 50px;
+
+        div.road {
+          display: none;
+        }
+
+        div.header-background {
+          background: none;
+          height:auto;
+
+          a {
+            top: -0.5em;
+
+            &.headlink {
+              display: inline-block;
+              @include size(3em);
+              background: url("./assets/images/avatar-head.png") no-repeat;
+              background-size: contain;
+              background-position: center;
+              position: absolute;
+              // margin-left:50%;
+              top: 0.25em;
+              left: 47.3%;
+
+
+              &:hover, &:active{
+                cursor: pointer;
+                background-color: $neutral-lighter;
+              }
+            }
+          }
+        }
+      }
+
+      div.header-title {
+        display: none
+      }
+    }
   }
-
-  &.sticky-on{
-    //background-color: $b;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    border-radius: 0;
-    margin: 0;
-  }
-
-  &.nav-up{
-    top:-60px;
-  }
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 /*--------------------------------------
 5. about
 ---------------------------------------*/
 
-.content.about{
+.content.about {
 
-  > p.quote{
+  > p.quote {
     @include grid-column(12);
     text-align: center;
   }
 
-  a.test-link{
-    @include grid-column(12);
-    padding:$spacing;
-    background-color: $green;
+  div.photo{
 
-    &:hover{
-      background-color: $green-dark;
-      cursor: pointer;
+    @include grid-column(12);
+    height: auto;
+
+    figure {
+      @include size(10em);
+      border-radius: 50%;
+      border: 2px solid $white;
+      background:url("./assets/images/pasfoto.png") no-repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: $spacing-small auto;
     }
   }
-
-  div.location{
+  
+  div.location {
 
     @include grid-column(12);
 
-    > div{
-        margin: $spacing-small 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    > div {
+      margin: $spacing-small 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      span{
+      span {
         height: 30px;
         width: 20px;
-        background:url("./assets/images/location-icon.png") no-repeat;
-        background-size:contain;
+        background: url("./assets/images/location-icon.png") no-repeat;
+        background-size: contain;
         margin-right: $spacing-small;
       }
 
-      p.quote{
-        color:$brown;
+      p.quote {
+        color: $brown;
         margin-bottom: 0;
       }
     }
@@ -381,9 +421,18 @@ div#header-title{
 
   @media #{$medium-screen} {
 
-    > p.quote{
+    > p.quote {
       @include grid-column(8);
-      @include grid-shift(2);
+      @include grid-shift(1);
+      text-align: left;
+    }
+
+    div.photo{
+
+      @include grid-column(2);
+      @include grid-shift(1);
+
+
     }
 
     p.quote {
@@ -396,66 +445,68 @@ div#header-title{
 5. timeline
 ---------------------------------------*/
 
-.timeline{
+.timeline {
 
   //overflow: hidden;
 
-  &::before{
-    content:'';
-    display:none;
-    position:absolute;
-    height:850px;
-    padding:30px 0;
-    width:15px;
+  &::before {
+    content: '';
+    display: none;
+    position: absolute;
+    height: 850px;
+    padding: 30px 0;
+    width: 15px;
     background-color: $neutral-dark;
     border-radius: $base-radius;
     z-index: 5;
 
     @media #{$medium-screen} {
-      display:block;
-      left:50%;
+      display: block;
+      left: 50%;
       margin-left: -5px;
     }
   }
 
-  div.timeline-event{
+  div.timeline-event {
 
-
-    &:not(:first-child){
-      border-top:1px solid $green;
+    &:not(:first-child) {
+      border-top: 1px solid $green;
     }
 
-    h3{
-        display: inline-block;
-        margin: $spacing-small 0;
-      }
-
-    h4{
-        display: inline-block;
+    h3 {
+      display: inline-block;
       margin: $spacing-small 0;
-        float:right;
     }
 
-    hr{
+    h4 {
+      display: inline-block;
+      margin: $spacing-small 0;
+      float: right;
+    }
+
+    hr {
       display: none;
     }
 
-    p{
+    p {
       margin-top: 0;
-      height: 60px;
+      //min-height: 60px;
     }
 
     @media #{$medium-screen} {
       @include grid-column(6);
       border-top: none !important;
 
-      hr{
+      hr {
         display: block;
         margin: 0 0 $spacing-small;
-        border-color:$green;
+        border-color: $green;
         border-style: solid;
       }
 
+      p{
+        height: 60px;
+      }
       span.project-block {
 
         display: block;
@@ -463,47 +514,51 @@ div#header-title{
         height: 6em;
         width: 1.5em;
         position: relative;
-        top:10px;
+        top: 10px;
 
-        &.education{
+        &.education {
           background-color: $blue;
         }
 
       }
 
-      &:nth-child(1), &:nth-child(2){
+      &:nth-child(1), &:nth-child(2) {
 
-        .project-block{background-color: $blue;}
-        hr{border-color: $blue}
+        .project-block {
+          background-color: $blue;
+        }
+        hr {
+          border-color: $blue
+        }
       }
 
-      &:nth-child(odd){
+      &:nth-child(odd) {
         //padding-right:$spacing;
-        margin-bottom:90px;
+        margin-bottom: 90px;
 
         .project-block {
           float: right;
-         -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
+          -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
           clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 85%);
-          left:5px;
+          left: 5px;
 
         }
 
-        .event-content{
+        .event-content {
           margin-right: $spacing;
         }
       }
 
-      &:nth-child(even){
+      &:nth-child(even) {
         //padding-left:50px;
-        margin-top:90px;
+        margin-top: 90px;
 
-        .event-content{
+        .event-content {
           margin-left: $spacing;
         }
 
         .project-block {
-          float:left;
+          float: left;
           -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0 100%);
           clip-path: polygon(0 0%, 100% 15%, 100% 85%, 0 100%);
 
@@ -517,35 +572,33 @@ div#header-title{
 6. info-blocks
 ---------------------------------------*/
 
-.content.info{
+.content.info {
 
-  hr{
+  hr {
     margin: $spacing-large auto;
-    width:40%;
+    width: 40%;
     max-width: 400px;
     border-style: solid;
-
   }
 
-
-  .visual{
+  .visual {
     //background-color:$neutral-light;
     //background-size: contain;
     @include grid-column(12);
 
-    > div{
+    > div {
 
       display: flex;
       align-items: center;
       justify-content: center;
       //margin: $spacing-small $spacing-large;
       width: 100%;
-      height:auto;
+      height: auto;
 
-      img{
+      img {
         display: block;
-        width:50%;
-        height:auto;
+        width: 50%;
+        height: auto;
         //background-size: contain;
         //background-position: center;
       }
@@ -554,11 +607,11 @@ div#header-title{
 
   }
 
-  .description{
+  .description {
 
     ul {
-        list-style: none;
-        padding-left:0;
+      list-style: none;
+      padding-left: 0;
 
       li {
         margin-bottom: $spacing-small;
@@ -572,14 +625,14 @@ div#header-title{
 
   @media #{$medium-screen} {
 
-    .visual{
+    .visual {
       @include grid-column(4);
 
-      > div{
-        margin:0;
+      > div {
+        margin: 0;
         height: 400px;
 
-        img{
+        img {
           width: 100%;
         }
 
@@ -587,15 +640,15 @@ div#header-title{
 
     }
 
-    .description{
+    .description {
       //@include grid-shift(1);
       @include grid-column(8);
 
-      ul{
+      ul {
         list-style: circle;
-        padding-left:$spacing;
+        padding-left: $spacing;
 
-        li{
+        li {
           padding-left: $spacing-small;
         }
       }
@@ -603,86 +656,75 @@ div#header-title{
   }
 }
 
-.content.knowledge{
+.content.knowledge {
 
-  div.visual span{
-    background:url("./assets/images/brain-section.png") no-repeat;
+  div.visual span {
+    background: url("./assets/images/brain-section.png") no-repeat;
   }
 
-  hr{
-    border-color:$blue;
+  hr {
+    border-color: $blue;
   }
 }
 
-.content.info.skills{
+.content.info.skills {
 
   div.visual {
 
   }
 
-  hr{
-    border-color:$green;
+  hr {
+    border-color: $green;
   }
 
 }
 
-.content.info.interests{
+.content.info.interests {
 
   @media #{$medium-screen} {
 
-    div.visual > div{
+    div.visual > div {
       width: 80%;
     }
   }
 
-  hr{
-    border-color:$brown;
+  hr {
+    border-color: $brown;
   }
 }
-
 
 /*--------------------------------------
 7. footer
 ---------------------------------------*/
 
-footer{
+footer {
   background-color: $neutral-dark;
-  padding:$spacing 0;
+  padding: $spacing 0;
 
+  .content {
+    color: $white;
 
-  .content{
-    color:$white;
-
-    h1{
-      color:inherit;
+    h1 {
+      color: inherit;
     }
 
-    p{
+    p {
       color: inherit;
       text-align: center;
     }
 
-    div.my-info{
+    div.my-info {
 
-      color:inherit;
+      color: inherit;
+      
 
-      figure{
-        @include size(10em);
-        border-radius: 50%;
-        border: 2px solid $white;
-        background-color: $neutral-light;
-        background-size:cover;
-        background-repeat: no-repeat;
-        margin:$spacing-small auto;
+      p {
+        color: inherit
       }
 
-      p{
-        color:inherit
-      }
-
-      ul{
+      ul {
         list-style: none;
-        padding:0;
+        padding: 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -691,72 +733,90 @@ footer{
 
         > li {
 
-          flex:0 1 auto;
+          flex: 0 1 auto;
 
-          &.link-left{
+          &.link-left {
             margin-right: $spacing-small;
           }
 
           > a {
-            color:inherit;
+            color: inherit;
             display: block;
             line-height: 2rem;
             text-align: center;
             @include size(30px);
-            border-radius:$base-radius;
+            border-radius: $base-radius;
             border: 2px solid $white;
+            text-decoration: none;
+
+            &.linked-in span{
+              display: block;
+              @include size(50%);
+              margin:7px;
+              background:url("./assets/images/linkedin-white.png") no-repeat;
+              background-position: center;
+              background-size:contain;
+            }
+
+            &:hover, &:active{
+              background: $white;
+              color:$neutral-dark;
+              text-decoration: none;
+
+              span{
+                background:url("./assets/images/linkedin-dark.png") no-repeat;
+                background-size:contain;
+              }
+            }
           }
         }
       }
     }
 
-    div.contact{
+    div.contact {
+      color: inherit;
 
-      color:inherit;
+      form {
+        input, textarea {
 
-      form{
-
-        input, textarea{
-
-          display:block;
+          display: block;
           box-sizing: border-box;
           width: 100%;
-          border-radius:$base-radius;
-          border:none;
-          background:$white;
+          border-radius: $base-radius;
+          border: none;
+          background: $white;
           margin-bottom: $spacing-small;
           min-height: 30px;
-          padding:$spacing-small;
+          padding: $spacing-small;
 
-          &::placeholder{
-            color:$neutral;
+          &::placeholder {
+            color: $neutral;
           }
         }
 
-        textarea{
+        textarea {
           min-height: 60px;
           max-width: 100%;
           margin-bottom: $spacing;
           overflow: hidden;
         }
 
-        button.primary{
-          display:block;
+        .button.primary {
+          display: block;
           width: 100%;
           //color:black
         }
       }
     }
 
-
     @media #{$tablet-screen}{
 
-      div.contact, div.my-info{
+      div.contact, div.my-info {
 
         @include grid-column(10);
         @include grid-shift(1);
 
-        figure{
+        figure {
           @include size(15em);
         }
       }
@@ -770,26 +830,22 @@ footer{
         @include grid-column(8);
         @include grid-shift(2);
 
-
-        form button.primary{
-          width: auto;
-          float: right;
+        form .button.primary {
+          width:100px;
+          margin:0 auto;
         }
-
 
       }
     }
 
     @media #{$large-screen} {
 
-      div.my-info{
+      div.my-info {
 
         @include grid-column(4);
         @include grid-shift(0);
 
-
-
-        ul > li{
+        ul > li {
 
           &.link-left {
             margin-right: $spacing;
@@ -798,6 +854,10 @@ footer{
           > a {
             @include size(40px);
             line-height: 3em;
+
+            &.linked-in span{
+              margin:10px;
+            }
           }
         }
 
