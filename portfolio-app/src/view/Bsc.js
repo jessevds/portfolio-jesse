@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import breeze from './../assets/images/Studie/Breeze.jpg';
-import cube from './../assets/images/Studie/cube.png';
-import fogar from './../assets/images/Studie/fogar.jpg';
+import cube from './../assets/images/Studie/cube.jpg';
+import cubepackaging from './../assets/images/Studie/cube-packaging.png';
 
 
 export default class ProjectPage extends React.Component {
@@ -50,27 +50,25 @@ export default class ProjectPage extends React.Component {
                         <hr></hr>
                     </div>
 
-                    <p> </p>
+                    <p>Inventing things was my motivation to do a Bachelor in Industrial Design. I learned about the many aspects involved in product development and how to apply this in a proper design process. I’ll tell you a bit more about the projects I have worked on.</p>
 
 
-                        <h3>Description</h3>
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
-
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
-                        <img src={cube} alt="DGT cube" />
-
-                        <h3>Description</h3>
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
-
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
+                        <h3>Philips Breeze</h3>
 
                         <img src={breeze} alt="breeze"/>
 
-                        <h3>Description</h3>
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
+                        <p>Together with three other students I worked on a concept for a new robotic vacuum cleaner. The problem with other robotic cleaners at the time was that the nozzle is in the center underneath the device. Hence it is impossible to clean in corners or right next to a wall. We conceptually solved this by designing an exterior nozzle. The nozzle will rotate when colliding with a wall or object and is kept in place using a torsion spring. In this project I spend time on designing mechatronics, making a prototype of the device and programming it’s algorithm. With a usability test we evaluated the cleaner’s interface. </p>
 
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
-                        <img src={fogar} alt="fogar manual" />
+
+                        <h3>DGT Cube</h3>
+
+                        <img src={cube} alt="DGT cube" />
+                        <p>For my graduation project I worked at Digital Game Technology (DGT) in Enschede. At the time they were in the final stages of developing an innovative board game timer and needed help working towards market introduction. I contributed by developing packaging and a manual for the product, designing stand material for the Nürnberg International Toy Fair and consulting on product interface. While the focus of my work was on marketing, branding and graphic design, the big challenge was project management. I had to synchronise my efforts with production and stand planning. Meanwhile coöperating with a Dutch design company, animator, graphic designer and Chinese manufacturer.
+                        </p>
+
+                        <h3>DGT Cube 10ps packaging</h3>
+                        <img src={cubepackaging} alt="DGT cube packaging" />
+
 
                     </div>
                 </div>
@@ -79,7 +77,7 @@ export default class ProjectPage extends React.Component {
                 <div className="page-navigation">
 
                     <nav>
-                        <Link className="button previous" to="/project" disabled>previous</Link>
+                        <Link className="button previous hidden" to="/project" disabled>previous</Link>
                         <div className="project-dots">
                             <span className="active"></span>
                             <span></span>

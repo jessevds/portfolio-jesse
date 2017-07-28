@@ -109,15 +109,18 @@ button, a.button {
 ---------------------------------------*/
 header .header-index {
   background-color: #53A6A9;
-  height: 160px;
+  height: 150px;
   padding: 15px; }
   header .header-index div.road {
     display: none; }
   header .header-index div.header-background {
     margin: 0 auto;
-    height: 12em;
-    width: 12em;
-    background: url("./assets/images/avatar-head.png") no-repeat;
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    background: url("./assets/images/pasfoto.png") no-repeat;
+    border: 2px solid #ffffff;
+    box-shadow: inset 1px 1px 6px #353635;
     background-size: contain;
     background-position: center; }
     header .header-index div.header-background a {
@@ -142,6 +145,9 @@ header .header-index {
         background: url("./assets/images/avatar-scene.png") no-repeat;
         background-size: contain;
         background-position: center;
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
         width: 100%;
         max-width: 735px;
         height: 300px; }
@@ -247,9 +253,7 @@ header div.header-title {
   text-align: center; }
 
 .content.about div.photo {
-  width: calc(100% - 40px);
-  float: left;
-  margin-left: 20px;
+  display: none;
   height: auto; }
   .content.about div.photo figure {
     height: 10em;
@@ -289,6 +293,7 @@ header div.header-title {
     position: relative;
     text-align: left; }
   .content.about div.photo {
+    display: block;
     width: calc(16.66667% - 23.33333px);
     float: left;
     margin-left: 20px;
@@ -324,7 +329,7 @@ header div.header-title {
   margin: 15px 0; }
 
 .timeline div.timeline-event h4 {
-  display: inline-block;
+  display: none;
   margin: 15px 0;
   float: right; }
 
@@ -345,6 +350,8 @@ header div.header-title {
       margin: 0 0 15px;
       border-color: #83BD6A;
       border-style: solid; }
+    .timeline div.timeline-event h4 {
+      display: inline-block; }
     .timeline div.timeline-event p {
       height: 60px; }
     .timeline div.timeline-event span.project-block {
@@ -395,11 +402,12 @@ header div.header-title {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto 30px;
     width: 100%;
     height: auto; }
     .content.info .visual > div img {
       display: block;
-      width: 50%;
+      width: 80%;
       height: auto; }
 
 .content.info .description ul {
@@ -520,8 +528,7 @@ footer {
         margin-bottom: 30px;
         overflow: hidden; }
       footer .content div.contact form .button.primary {
-        display: block;
-        width: 100%; }
+        display: block; }
     @media (min-width: 480px) {
       footer .content div.contact, footer .content div.my-info {
         width: calc(83.33333% - 36.66667px);
@@ -667,6 +674,12 @@ footer {
       display: block; }
     .project-page div.project-content.education {
       background-color: #53A6A9; }
+    .project-page div.project-content div.auto-height {
+      height: auto;
+      overflow: hidden; }
+    .project-page div.project-content iframe {
+      display: block;
+      margin: 0 auto; }
     .project-page div.project-content h1 {
       text-align: center;
       color: inherit;

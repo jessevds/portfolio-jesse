@@ -176,7 +176,7 @@ header {
 
   .header-index {
     background-color: $blue;
-    height: 160px;
+    height: 150px;
     padding: $spacing-small;
 
     div.road {
@@ -185,9 +185,12 @@ header {
 
     div.header-background {
       margin: 0 auto;
-      height: 12em;
-      width: 12em;
-      background: url("./assets/images/avatar-head.png") no-repeat;
+      height: 10em;
+      width: 10em;
+      border-radius: 50%;
+      background:url("./assets/images/pasfoto.png") no-repeat;
+      border: 2px solid $white;
+      box-shadow: inset 1px 1px 6px $neutral-dark;
       background-size: contain;
       background-position: center;
 
@@ -219,6 +222,9 @@ header {
         background: url("./assets/images/avatar-scene.png") no-repeat;
         background-size: contain;
         background-position: center;
+        border-radius:0;
+        box-shadow: none;
+        border:none;
         width: 100%;
         max-width: 735px;
         height: 300px;
@@ -380,7 +386,7 @@ header {
 
   div.photo{
 
-    @include grid-column(12);
+    display: none;
     height: auto;
 
     figure {
@@ -429,6 +435,7 @@ header {
 
     div.photo{
 
+      display: block;
       @include grid-column(2);
       @include grid-shift(1);
 
@@ -479,7 +486,7 @@ header {
     }
 
     h4 {
-      display: inline-block;
+      display:none;
       margin: $spacing-small 0;
       float: right;
     }
@@ -502,6 +509,10 @@ header {
         margin: 0 0 $spacing-small;
         border-color: $green;
         border-style: solid;
+      }
+
+      h4{
+        display: inline-block;
       }
 
       p{
@@ -591,13 +602,13 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      //margin: $spacing-small $spacing-large;
+      margin: 0 auto $spacing;
       width: 100%;
       height: auto;
 
       img {
         display: block;
-        width: 50%;
+        width: 80%;
         height: auto;
         //background-size: contain;
         //background-position: center;
@@ -803,8 +814,6 @@ footer {
 
         .button.primary {
           display: block;
-          width: 100%;
-          //color:black
         }
       }
     }

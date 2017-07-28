@@ -154,6 +154,16 @@
     clip-path: polygon(0 0, 100% 2%, 100% 98%, 0 100%);
 
 
+    div.auto-height{
+      height: auto;
+      overflow: hidden;
+    }
+
+    iframe{
+      display:block;
+      margin: 0 auto;
+    }
+
     h1{
       text-align: center;
       color:inherit;

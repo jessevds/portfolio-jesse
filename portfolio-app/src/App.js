@@ -13,8 +13,7 @@ import Parnassys from './view/Parnassys';
 import Graphical from './view/Graphical';
 import Pupil from './view/Pupil';
 import Wiser from './view/Wiser';
-import Datazoo from './view/Datazoo';
-import Geon from './view/Datazoo';
+import Geon from './view/Geon';
 
 
 
@@ -23,9 +22,7 @@ class App extends Component {
     componentDidMount(){
 
         this.element.classList;
-
     };
-
 
     render() {
 
@@ -44,8 +41,6 @@ class App extends Component {
                         <Route path="/pupil" component={Pupil}/>
                         <Route path="/geon" component={Geon}/>
                         <Route path="/wise-r" component={Wiser}/>
-                        <Route path="/wise-r" component={Datazoo}/>
-
                     </div>
                 </Router>
             </div>

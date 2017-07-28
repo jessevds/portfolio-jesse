@@ -83,18 +83,18 @@ export default class Graphical extends React.Component {
                 <div className="page-navigation">
 
                     <nav>
-                        <Link className="button previous" to="/project">previous</Link>
+                        <Link className="button previous" to="/wise-r">previous</Link>
                         <div className="project-dots">
                             <span></span>
                             <span></span>
                             <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                             <span className="active"></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
                         </div>
-                        <Link className="button next" to="/project">next</Link>
+                        <Link className="button next hidden" to="/graphical">next</Link>
                     </nav>
 
                 </div>

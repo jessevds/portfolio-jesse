@@ -1,6 +1,7 @@
 {
-  "name": "portfolio-app",
+  "name": "portfolio-jesse",
   "version": "0.1.0",
+  "homepage": "http://www.jesvanders.com",
   "private": true,
   "dependencies": {
     "node-bourbon": "^4.2.8",

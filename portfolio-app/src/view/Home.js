@@ -14,8 +14,6 @@ import heart from "./../assets/images/heart-section.png"
 
 var Scroll    = require('react-scroll');
 
-//var Link       = Scroll.Link;
-//var DirectLink = Scroll.DirectLink;
 var Element    = Scroll.Element;
 var Events     = Scroll.Events;
 var scroll     = Scroll.animateScroll;
@@ -94,7 +92,7 @@ export default class Home extends React.Component {
                             lot of interests and often see possibilities to explore further. What I am most enthusiastic
                             about is making technology and information understandable and usable for people. From my
                             education and work experience I know what a good design process is and how to take the
-                            users of a product into account. I use my technological knowledge and
+                            users of a product into account. I apply my technological knowledge and
                             feeling for design to contribute in development. Although I can be a bit chaotic at times, I can guarantee creativity,
                             intelligence and a social attitude.”
                         </p>
@@ -142,7 +140,7 @@ export default class Home extends React.Component {
                         <ul>
                             <li>
                                 <h3>Visual design</h3>
-                                <p>I know my way around Adobe’s Photoshop, Illustrator and Indesign. For designing interfaces I prefer Sketch though. It is what you want in iterating from low fidelity screen flows to detailed designs. Drawing with pen and paper or on a whiteboard is always the first step however. I do this a lot to develop and communicate idea’s.</p>
+                                <p>I know my way around Adobe’s Photoshop, Illustrator and Indesign. For designing interfaces I prefer Sketch though. It is what you want in iterating from low fidelity screenflow to detailed design. Drawing with pen and paper or on a whiteboard is always the first step however. I do this a lot to develop and communicate idea’s.</p>
                             </li>
                             <li>
                                 <h3>User research</h3>
@@ -150,7 +148,7 @@ export default class Home extends React.Component {
                             </li>
                             <li>
                                 <h3>Prototyping</h3>
-                                <p>I have experience using a variety of prototyping tools for screen flows and product demo’s. Pen, paper and scissors, Axure, Balsamiq, Pixate, Flinto, HTML and Invision. The tool depends on the use-case and level of fidelity really. Therefore the question is what do you really need to simulate?</p>
+                                <p>I have experience using a variety of prototyping tools for screenflows and product demo’s. Pen, paper and scissors, Axure, Balsamiq, Pixate, Flinto, HTML and Invision. The tool depends on the use-case and level of fidelity really. Therefore the question is what do you really need to simulate?</p>
                             </li>
                             <li>
                                 <h3>Front-end development</h3>
@@ -240,7 +238,7 @@ export default class Home extends React.Component {
                                 </li>
                                 <li>
                                     <h3>Games</h3>
-                                    <p>I love to play games when there is strategy, interaction and roleplaying involved. This is most enjoyable with a good boardgames and some friends, beers and snacks. I can also enjoy myself in the digital realm having wasted plenty of time on the Assassins Creed series and World of Warcraft in it’s heydays.</p>
+                                    <p>I love to play games when there is strategy, interaction and roleplaying involved. This is most enjoyable with a good boardgame and some friends, beers and snacks. I can also enjoy myself in the digital realm having wasted plenty of time on the Assassins Creed series and World of Warcraft in it’s heydays.</p>
                                 </li>
                             </ul>
 

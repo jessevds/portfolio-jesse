@@ -56,26 +56,19 @@ export default class ProjectPage extends React.Component {
 
                         <h2>Public transport assistant</h2>
 
-                        <img src={adappt} als="OV AdAppt - public transport assistant"/>
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
-
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
-
-                        <h2>Educational traffic game</h2>
-                        <img src={traffic} als="Educational traffic game"/>
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
-
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
-
+                        <img src={adappt} alt="OV AdAppt - public transport assistant"/>
+                        <p>For the course ‘User centred design of new media’ I worked together with a software engineering student to create the ‘Ov AddAppt’ concept. This is a smartphone app intended to help autistic and visually impaired people cope with the public transport system in the Netherlands. This system can be stressful, especially with a handicap. You don’t always know what to do, where to find information or what your travel status is. The OV AddAppt can easily inform about; your travel history, your balance, nearby top-up points and whether you have checked-out. The endgoal is to be more confident and self-reliant when travelling. During this project I did; research on Autism and it’s challenges, user interviews, problem analysis of the current system, interface design, prototyping and usability tests.
+                        </p>
 
                         <h2>Energy efficient road sign</h2>
 
-                        <img src={highway} als="Smart Highway sign"/>
+                        <img src={highway} alt="Smart Highway sign"/>
 
-                        <p>Short description of the project i have been working on. just to give an overview for getting visitors interested to. blablabla blablabla sids. From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude.
+                        <p>The goal of this project was to develop a concept for sustainable innovation used for the highway. Using innovation frameworks my partner and me came up with the ‘Smart Roadway Sign’. It is intended as an energy efficient alternative for matrix signs used to indicate speed or show traffic signs. These signs show information by radiating LED light and need a steady power supply. the information they need to represent does not change very often however. The Smart roadway sign uses the technology found in e-readers and does not need to be powered all the time. To get a bit technical: On an electro-magnetic grid, ink-particles are charged to shift between foreground and background. Hence they become visible or not. Only when their status needs to change the need to be charged again. Because of this, the whole sign can be powered by solar cells. and can do without a static energy source. This is convenient when you need portable signage for road maintenance.</p>
 
-                            From my education and other experiences I know what a good design process is and how to take the users of a product into account here. In this I also use my technological knowledge and feeling for design. Although I can be a bit chaotic  at times, I can guarantee creativity, intelligence and a social attitude  </p>
-
+                        <h2>Educational traffic game</h2>
+                        <img src={traffic} alt="Educational traffic game"/>
+                        <p>In a course on learning with games and simulation  an ineffective traffic simulation was presented. I had to transform this in a game concept that does a better job in teaching traffic rules to primary school children. For this i needed to get into gamification theories; creating a recognisable game avatar, using a scenario and game goal that is motivating, using feedback at the right time, increasing difficulty in different levels and providing challenges to fail and overcome. In the resulting game a child had to ride around town to deliver invitations for his/her birthday party. In each trip to a friend’s different traffic situations are encountered. On each successful delivery the player is rewarded and will be able to invest in supplies for the party.</p>
 
                     </div>
                 </div>
@@ -95,7 +88,7 @@ export default class ProjectPage extends React.Component {
                             <span></span>
                             <span></span>
                         </div>
-                        <Link className="button next" to="/parnassys">next</Link>
+                        <Link className="button next" to="/network-world">next</Link>
                     </nav>
 
                 </div>

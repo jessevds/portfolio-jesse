@@ -20,12 +20,12 @@ export default class Footer extends React.Component {
 
                     <div className="my-info">
 
-                        <h1>So that's me</h1>
+                        <h1>That's me</h1>
 
                         <p>also check out my:</p>
                         <ul>
                             <li className="link-left">
-                                <a href={CV}>CV</a>
+                                <a target="_blank" href={CV}>CV</a>
                             </li>
                             <li>
                                 <a className="linked-in" href="https://www.linkedin.com/in/jesse-van-der-scheer-10bb57a/" target="_blank"><span></span></a>
@@ -37,7 +37,7 @@ export default class Footer extends React.Component {
                     <div className="contact">
 
                         <h1>who are you?</h1>
-                        <p>Contact and i'll get back to you as soon as possible</p>
+                        <p>Contact me and i'll get back to you as soon as possible</p>
 
                         <form>
                             <Mailto className="button primary" email="jesse.vanderscheer@gmail.com">Email me</Mailto>
